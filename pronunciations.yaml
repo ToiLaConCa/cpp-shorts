@@ -1,0 +1,13 @@
+# Thay chữ trước khi đưa vào TTS (chỉ ảnh hưởng giọng đọc, không đổi phụ đề).
+# Đây là gợi ý ban đầu: hãy NGHE thử rồi chỉnh cho đúng giọng bạn muốn.
+"C++": "xi cộng cộng"
+"std::cout": "ét-ti-đi xi-aot"
+"cout": "xi-aot"
+"cin": "xi-in"
+"nullptr": "nan pôi-tơ"
+"std": "ét ti đi"
+"int": "in"
+"bool": "bun"
+"vector": "véc tơ"
+"pointer": "poi-tơ"
+"const": "con"

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cá nóc mascot – bản rig thử</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&display=swap">
+<style>
+:root{--bg:#fbeee8;--stage:#fddfd3;--ink:#4a2142;--mut:#85607c;--btn:#5a2d4f;--btnt:#fff;--btn2:#f3cfc2;--cap:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1024;--stage:#2c1735;--ink:#f6e4ef;--mut:#bf9bb4;--btn:#f0a995;--btnt:#3a1a38;--btn2:#3b2146;--cap:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lexend,system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:14px;padding:18px 12px 30px}
+.stage{width:min(100%,380px);aspect-ratio:1;border-radius:22px;background:var(--stage);position:relative;overflow:hidden}
+svg{width:100%;height:100%;display:block}
+#cap{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);background:var(--cap);color:#3a1a38;font-weight:700;font-size:15px;padding:8px 16px;border-radius:999px;white-space:nowrap;transition:opacity .2s}
+.row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:380px}
+button{font:700 14px Lexend,system-ui,sans-serif;border:0;border-radius:999px;padding:10px 16px;cursor:pointer;background:var(--btn2);color:var(--ink)}
+button.on,button.primary{background:var(--btn);color:var(--btnt)}
+button:focus-visible{outline:3px solid #e0907e;outline-offset:2px}
+.note{max-width:380px;font-size:13px;line-height:1.55;color:var(--mut);margin:0}
+.note b{color:var(--ink)}
+/* rig */
+#float{animation:fl 3.2s ease-in-out infinite}
+#breath{transform-origin:150px 160px;animation:br 2.4s ease-in-out infinite}
+#puff{transform-origin:150px 150px;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+#spines{transform-origin:150px 150px;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+#tail{transform-origin:238px 128px;animation:tw 1.3s ease-in-out infinite}
+#fin{transform-origin:196px 142px;animation:fn .9s ease-in-out infinite}
+#eyes{transition:transform .2s}
+#lid{transform-origin:127px 110px;transition:transform .08s}
+svg.blink #lid{transform:scaleY(.08)}
+.eye{r:11;transition:r .2s}
+.m{opacity:0}
+svg[data-mouth=smile] #m-smile,svg[data-mouth=a] #m-a,svg[data-mouth=o] #m-o,svg[data-mouth=big] #m-big,svg[data-mouth=flat] #m-flat{opacity:1}
+#brows,#happy{opacity:0;transition:opacity .2s}
+svg[data-pose=wow] #puff{transform:scale(1.15)}
+svg[data-pose=wow] #spines{transform:scale(1.07)}
+svg[data-pose=wow] .eye{r:14}
+svg[data-pose=wow] #brows{opacity:1;transform:translateY(-6px)}
+svg[data-pose=think] #eyes{transform:translate(-6px,-6px)}
+svg[data-pose=think] #brows{opacity:1}
+svg[data-pose=think] #browL{transform:translateY(5px) rotate(8deg);transform-origin:90px 92px}
+svg[data-pose=think] #breath{transform:rotate(-5deg)}
+svg[data-pose=happy] #eyes{opacity:0}
+svg[data-pose=happy] #happy{opacity:1}
+svg[data-pose=wow] #float{animation:sh .12s linear 4}
+@keyframes fl{50%{transform:translateY(-7px)}}
+@keyframes br{50%{transform:scale(1.02,.985)}}
+@keyframes tw{50%{transform:rotate(-12deg)}}
+@keyframes fn{50%{transform:rotate(14deg)}}
+@keyframes sh{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@media (prefers-reduced-motion:reduce){#float,#breath,#tail,#fin,svg[data-pose=wow] #float{animation:none}}
+</style>
+</head>
+<body>
+<div class="stage">
+<svg id="fish" viewBox="0 0 300 300" data-pose="idle" data-mouth="smile" role="img" aria-label="Cá nóc mascot">
+ <defs><clipPath id="cb"><circle cx="150" cy="150" r="100"/></clipPath></defs>
+ <g id="float"><g id="breath"><g id="puff">
+  <g id="tail"><path d="M236 132 C255 122 272 96 288 84 L284 120 L296 146 C272 152 252 150 236 146Z" fill="#f6e6c0" stroke="#5a2d4f" stroke-width="6" stroke-linejoin="round"/><path d="M262 118 L284 104 M264 132 L288 130" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+  <circle cx="150" cy="150" r="100" fill="#f5e2b4"/>
+  <g clip-path="url(#cb)">
+   <path d="M30 150 C80 140 100 182 140 180 C190 178 215 140 270 152 L270 30 L30 30Z" fill="#e0907e"/>
+   <path d="M40 215 C100 232 200 232 262 205 L262 262 L40 262Z" fill="#dcb87c"/>
+   <path d="M60 80 C90 50 150 42 200 58" stroke="#f0b4a4" stroke-width="10" stroke-linecap="round" fill="none"/>
+  </g>
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#5a2d4f" stroke-width="7"/>
+  <g id="spines" fill="#5a2d4f"></g>
+  <g id="marks" fill="none" stroke="#5a2d4f" stroke-width="4.5" stroke-linecap="round"></g>
+  <g id="fin"><path d="M192 140 C205 120 232 118 240 126 C238 146 214 164 192 156Z" fill="#f6e6c0" stroke="#5a2d4f" stroke-width="6" stroke-linejoin="round"/><path d="M204 140 L226 130 M204 148 L230 144 M205 155 L224 156" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></g>
+  <ellipse cx="116" cy="152" rx="22" ry="15" fill="#cf6f64" stroke="#a8504f" stroke-width="3"/>
+  <ellipse cx="116" cy="145" rx="9" ry="5" fill="#b5534f"/>
+  <g id="mouth">
+   <path id="m-smile" class="m" d="M106 158 q10 9 20 0" stroke="#5a2d4f" stroke-width="4" fill="none" stroke-linecap="round"/>
+   <ellipse id="m-a" class="m" cx="116" cy="161" rx="10" ry="7" fill="#5a1d44"/>
+   <ellipse id="m-o" class="m" cx="116" cy="162" rx="6" ry="9" fill="#5a1d44"/>
+   <path id="m-big" class="m" d="M102 157 q14 22 28 0Z" fill="#5a1d44" stroke="#5a2d4f" stroke-width="3" stroke-linejoin="round"/>
+   <path id="m-flat" class="m" d="M108 161 h16" stroke="#5a2d4f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g id="eyes"><g id="lid">
+   <circle class="eye" cx="90" cy="110" fill="#3d1a3f"/><circle class="eye" cx="165" cy="110" fill="#3d1a3f"/>
+   <circle cx="85" cy="105" r="4" fill="#fff"/><circle cx="160" cy="105" r="4" fill="#fff"/><circle cx="94" cy="116" r="2" fill="#fff"/><circle cx="169" cy="116" r="2" fill="#fff"/>
+  </g></g>
+  <g id="happy" fill="none" stroke="#3d1a3f" stroke-width="6" stroke-linecap="round"><path d="M77 114 q13 -17 26 0"/><path d="M152 114 q13 -17 26 0"/></g>
+  <g id="brows" stroke="#3d1a3f" stroke-width="5" stroke-linecap="round"><path id="browL" d="M76 90 h26"/><path d="M152 90 h26"/></g>
+ </g></g></g>
+</svg>
+<div id="cap">Xin chào, mình là Fish!</div>
+</div>
+<div class="row" id="btns">
+ <button data-p="idle" class="on">Đứng yên</button><button data-p="talk">Đang nói</button><button data-p="wow">Bug rồi!</button><button data-p="think">Đang nghĩ</button><button data-p="happy">Chạy được</button>
+</div>
+<div class="row"><button class="primary" id="seq">▶ Chạy thử kịch bản</button></div>
+<p class="note">Con cá này gồm các lớp rời: <b>thân, đuôi, vây, gai, mắt, mày, miệng (5 kiểu)</b>. Chớp mắt, thở, đung đưa đuôi và vây chạy tự động. “Bug rồi!” làm cá phồng lên: chỉ cá nóc mới làm được và rất hợp cảnh lỗi (segfault, null pointer).</p>
+<script>
+const $=id=>document.getElementById(id);
+const svg=$('fish');
+// gai và hoa văn sinh bằng code
+const sp=$('spines');
+[-170,-150,-125,-100,-75,-50,-25,0,20,45,70,95,125,155,180].forEach(a=>{
+  const r=a*Math.PI/180;const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  c.setAttribute('cx',150+101*Math.cos(r));c.setAttribute('cy',150+101*Math.sin(r));c.setAttribute('r',5.5);sp.appendChild(c)});
+const mk=$('marks');
+function arc(x,y,up){const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d',up?`M${x-6} ${y+3} q6 -9 12 0`:`M${x-6} ${y-3} q6 9 12 0`);mk.appendChild(p)}
+[[135,70],[190,80],[215,100],[158,58]].forEach(([x,y])=>arc(x,y,true));
+[[85,195],[150,205],[215,195],[120,225],[180,230],[70,170],[235,178],[150,180],[190,205],[100,205]].forEach(([x,y])=>arc(x,y,false));
+const caps={idle:'Xin chào, mình là Fish!',talk:'Con trỏ lưu địa chỉ của biến.',wow:'Segfault!!',think:'Hmm… p đang trỏ đi đâu nhỉ?',happy:'Chạy được rồi!'};
+let tt=null,seqT=null;
+function setPose(p){
+  svg.dataset.pose=p;$('cap').textContent=caps[p];clearInterval(tt);
+  if(p==='talk'){let i=0;const m=['a','o','smile','a','flat','o'];tt=setInterval(()=>svg.dataset.mouth=m[i++%m.length],150)}
+  else svg.dataset.mouth={wow:'o',happy:'big',think:'flat',idle:'smile'}[p];
+  document.querySelectorAll('#btns button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+}
+document.querySelectorAll('#btns button').forEach(b=>b.onclick=()=>{clearInterval(seqT);setPose(b.dataset.p)});
+(function blink(){svg.classList.add('blink');setTimeout(()=>svg.classList.remove('blink'),110);setTimeout(blink,2200+Math.random()*2800)})();
+$('seq').onclick=()=>{clearInterval(seqT);const order=['talk','think','wow','happy','idle'];let i=0;setPose(order[0]);
+  seqT=setInterval(()=>{i++;if(i>=order.length){clearInterval(seqT);return}setPose(order[i])},2600)};
+</script>
+</body>
+</html>

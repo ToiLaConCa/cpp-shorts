@@ -1,0 +1,98 @@
+# Giáo trình ~80 bài. Thứ tự id = thứ tự làm. needs = bài nên học trước.
+# Đọc lại, xóa hoặc đổi bài tùy ý. 1 bài = 1 ý giải thích được trong ~60 giây.
+- chapter: "1. Cơ bản"
+  lessons:
+    - {id: 1, topic: "Hello World và cấu trúc chương trình C++"}
+    - {id: 2, topic: "Biến và kiểu dữ liệu cơ bản", needs: [1]}
+    - {id: 3, topic: "Nhập xuất với cin và cout", needs: [1]}
+    - {id: 4, topic: "Toán tử số học và thứ tự ưu tiên", needs: [2]}
+    - {id: 5, topic: "Chia số nguyên và ép kiểu", needs: [4]}
+    - {id: 6, topic: "if/else và toán tử so sánh", needs: [2]}
+    - {id: 7, topic: "switch case", needs: [6]}
+    - {id: 8, topic: "Vòng lặp for", needs: [6]}
+    - {id: 9, topic: "Vòng lặp while và do-while", needs: [8]}
+    - {id: 10, topic: "break và continue", needs: [9]}
+- chapter: "2. Hàm"
+  lessons:
+    - {id: 11, topic: "Hàm: tham số và giá trị trả về", needs: [8]}
+    - {id: 12, topic: "Hàm void và nạp chồng hàm (overloading)", needs: [11]}
+    - {id: 13, topic: "Tham số mặc định", needs: [11]}
+    - {id: 14, topic: "Phạm vi biến (scope) và biến toàn cục", needs: [11]}
+    - {id: 15, topic: "Đệ quy cơ bản: giai thừa", needs: [11]}
+    - {id: 16, topic: "Lỗi đệ quy không có điểm dừng (stack overflow)", needs: [15]}
+    - {id: 17, topic: "Hàm inline và constexpr", needs: [11]}
+- chapter: "3. Mảng và chuỗi"
+  lessons:
+    - {id: 18, topic: "Mảng và truy cập theo chỉ số", needs: [8]}
+    - {id: 19, topic: "Duyệt mảng bằng range-based for", needs: [18]}
+    - {id: 20, topic: "Lỗi tràn mảng (out of bounds)", needs: [18]}
+    - {id: 21, topic: "Mảng hai chiều", needs: [18]}
+    - {id: 22, topic: "std::string cơ bản", needs: [3]}
+    - {id: 23, topic: "Nối, cắt và tìm trong chuỗi", needs: [22]}
+    - {id: 24, topic: "std::vector và push_back", needs: [18]}
+    - {id: 25, topic: "Duyệt, thêm, xóa phần tử vector", needs: [24]}
+    - {id: 26, topic: "std::array khác mảng thường thế nào", needs: [18]}
+    - {id: 27, topic: "Sắp xếp với std::sort", needs: [24]}
+- chapter: "4. Con trỏ và bộ nhớ"
+  lessons:
+    - {id: 28, topic: "Con trỏ là gì: & và *", needs: [2]}
+    - {id: 29, topic: "nullptr và lỗi con trỏ null", needs: [28]}
+    - {id: 30, topic: "Con trỏ và mảng", needs: [28, 18]}
+    - {id: 31, topic: "Số học con trỏ", needs: [30]}
+    - {id: 32, topic: "Tham chiếu (reference)", needs: [28]}
+    - {id: 33, topic: "Tham chiếu khác con trỏ ở đâu", needs: [32]}
+    - {id: 34, topic: "Truyền tham số bằng giá trị, tham chiếu và con trỏ", needs: [32, 11]}
+    - {id: 35, topic: "const với biến, con trỏ và tham chiếu", needs: [34]}
+    - {id: 36, topic: "Stack và heap", needs: [28]}
+    - {id: 37, topic: "new và delete", needs: [36]}
+    - {id: 38, topic: "Rò rỉ bộ nhớ (memory leak)", needs: [37]}
+    - {id: 39, topic: "Con trỏ treo (dangling pointer)", needs: [37]}
+    - {id: 40, topic: "Giải phóng hai lần (double free)", needs: [37]}
+- chapter: "5. struct và class"
+  lessons:
+    - {id: 41, topic: "struct: gom dữ liệu lại", needs: [11]}
+    - {id: 42, topic: "class và phương thức", needs: [41]}
+    - {id: 43, topic: "public và private", needs: [42]}
+    - {id: 44, topic: "Constructor", needs: [42]}
+    - {id: 45, topic: "Destructor", needs: [44, 37]}
+    - {id: 46, topic: "Con trỏ this", needs: [42]}
+    - {id: 47, topic: "Thành viên static", needs: [42]}
+    - {id: 48, topic: "Nạp chồng toán tử", needs: [42]}
+    - {id: 49, topic: "Kế thừa (inheritance)", needs: [42]}
+    - {id: 50, topic: "Hàm virtual và đa hình", needs: [49]}
+    - {id: 51, topic: "Lớp trừu tượng và interface", needs: [50]}
+- chapter: "6. RAII và smart pointer"
+  lessons:
+    - {id: 52, topic: "RAII: tài nguyên gắn với vòng đời đối tượng", needs: [45]}
+    - {id: 53, topic: "std::unique_ptr", needs: [52]}
+    - {id: 54, topic: "std::shared_ptr", needs: [53]}
+    - {id: 55, topic: "std::weak_ptr và vòng tham chiếu", needs: [54]}
+    - {id: 56, topic: "Copy và move", needs: [45]}
+    - {id: 57, topic: "std::move và rvalue reference", needs: [56]}
+    - {id: 58, topic: "Rule of 0, 3, 5", needs: [56]}
+- chapter: "7. STL"
+  lessons:
+    - {id: 59, topic: "std::map", needs: [24]}
+    - {id: 60, topic: "std::unordered_map", needs: [59]}
+    - {id: 61, topic: "std::set", needs: [24]}
+    - {id: 62, topic: "std::stack và std::queue", needs: [24]}
+    - {id: 63, topic: "std::pair và structured bindings", needs: [59]}
+    - {id: 64, topic: "Iterator", needs: [24]}
+    - {id: 65, topic: "std::find và std::count", needs: [64]}
+    - {id: 66, topic: "Lambda cơ bản", needs: [65]}
+    - {id: 67, topic: "std::function", needs: [66]}
+    - {id: 68, topic: "std::optional", needs: [29]}
+    - {id: 69, topic: "std::string_view", needs: [22]}
+- chapter: "8. Nâng cao một chút"
+  lessons:
+    - {id: 70, topic: "Template hàm", needs: [12]}
+    - {id: 71, topic: "Template lớp", needs: [70, 42]}
+    - {id: 72, topic: "Xử lý ngoại lệ try/catch", needs: [11]}
+    - {id: 73, topic: "enum class", needs: [7]}
+    - {id: 74, topic: "namespace", needs: [11]}
+    - {id: 75, topic: "File header và include guard", needs: [74]}
+    - {id: 76, topic: "auto và decltype", needs: [2]}
+    - {id: 77, topic: "Đọc và ghi file với fstream", needs: [22]}
+    - {id: 78, topic: "Undefined behavior là gì", needs: [20, 39]}
+    - {id: 79, topic: "Gỡ lỗi với debugger và in log", needs: [11]}
+    - {id: 80, topic: "Tổng kết: viết một chương trình nhỏ hoàn chỉnh", needs: [59, 42]}

@@ -1,0 +1,31 @@
+<svg id="fish" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="600" height="600" role="img" aria-label="Pufferfish mascot"><style>.m{opacity:0}#m-smile{opacity:1}.eye{r:11}#brows,#happy{opacity:0}</style>
+ <defs><clipPath id="cb"><circle cx="150" cy="150" r="100"/></clipPath></defs>
+ <g id="float"><g id="breath"><g id="puff">
+  <g id="tail"><path d="M236 132 C255 122 272 96 288 84 L284 120 L296 146 C272 152 252 150 236 146Z" fill="#f6e6c0" stroke="#5a2d4f" stroke-width="6" stroke-linejoin="round"/><path d="M262 118 L284 104 M264 132 L288 130" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+  <circle cx="150" cy="150" r="100" fill="#f5e2b4"/>
+  <g clip-path="url(#cb)">
+   <path d="M30 150 C80 140 100 182 140 180 C190 178 215 140 270 152 L270 30 L30 30Z" fill="#e0907e"/>
+   <path d="M40 215 C100 232 200 232 262 205 L262 262 L40 262Z" fill="#dcb87c"/>
+   <path d="M60 80 C90 50 150 42 200 58" stroke="#f0b4a4" stroke-width="10" stroke-linecap="round" fill="none"/>
+  </g>
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#5a2d4f" stroke-width="7"/>
+  <g id="spines" fill="#5a2d4f"><circle cx="50.5" cy="132.5" r="5.5"/><circle cx="62.5" cy="99.5" r="5.5"/><circle cx="92.1" cy="67.3" r="5.5"/><circle cx="132.5" cy="50.5" r="5.5"/><circle cx="176.1" cy="52.4" r="5.5"/><circle cx="214.9" cy="72.6" r="5.5"/><circle cx="241.5" cy="107.3" r="5.5"/><circle cx="251.0" cy="150.0" r="5.5"/><circle cx="244.9" cy="184.5" r="5.5"/><circle cx="221.4" cy="221.4" r="5.5"/><circle cx="184.5" cy="244.9" r="5.5"/><circle cx="141.2" cy="250.6" r="5.5"/><circle cx="92.1" cy="232.7" r="5.5"/><circle cx="58.5" cy="192.7" r="5.5"/><circle cx="49.0" cy="150.0" r="5.5"/></g>
+  <g id="marks" fill="none" stroke="#5a2d4f" stroke-width="4.5" stroke-linecap="round"><path d="M129 73 q6 -9 12 0"/><path d="M184 83 q6 -9 12 0"/><path d="M209 103 q6 -9 12 0"/><path d="M152 61 q6 -9 12 0"/><path d="M79 192 q6 9 12 0"/><path d="M144 202 q6 9 12 0"/><path d="M209 192 q6 9 12 0"/><path d="M114 222 q6 9 12 0"/><path d="M174 227 q6 9 12 0"/><path d="M64 167 q6 9 12 0"/><path d="M229 175 q6 9 12 0"/><path d="M144 177 q6 9 12 0"/><path d="M184 202 q6 9 12 0"/><path d="M94 202 q6 9 12 0"/></g>
+  <g id="fin"><path d="M192 140 C205 120 232 118 240 126 C238 146 214 164 192 156Z" fill="#f6e6c0" stroke="#5a2d4f" stroke-width="6" stroke-linejoin="round"/><path d="M204 140 L226 130 M204 148 L230 144 M205 155 L224 156" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></g>
+  <ellipse cx="116" cy="152" rx="22" ry="15" fill="#cf6f64" stroke="#a8504f" stroke-width="3"/>
+  <ellipse cx="116" cy="145" rx="9" ry="5" fill="#b5534f"/>
+  <g id="mouth">
+   <path id="m-smile" class="m" d="M106 158 q10 9 20 0" stroke="#5a2d4f" stroke-width="4" fill="none" stroke-linecap="round"/>
+   <ellipse id="m-a" class="m" cx="116" cy="161" rx="10" ry="7" fill="#5a1d44"/>
+   <ellipse id="m-o" class="m" cx="116" cy="162" rx="6" ry="9" fill="#5a1d44"/>
+   <path id="m-big" class="m" d="M102 157 q14 22 28 0Z" fill="#5a1d44" stroke="#5a2d4f" stroke-width="3" stroke-linejoin="round"/>
+   <path id="m-flat" class="m" d="M108 161 h16" stroke="#5a2d4f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g id="eyes"><g id="lid">
+   <circle class="eye" cx="90" cy="110" fill="#3d1a3f"/><circle class="eye" cx="165" cy="110" fill="#3d1a3f"/>
+   <circle cx="85" cy="105" r="4" fill="#fff"/><circle cx="160" cy="105" r="4" fill="#fff"/><circle cx="94" cy="116" r="2" fill="#fff"/><circle cx="169" cy="116" r="2" fill="#fff"/>
+  </g></g>
+  <g id="happy" fill="none" stroke="#3d1a3f" stroke-width="6" stroke-linecap="round"><path d="M77 114 q13 -17 26 0"/><path d="M152 114 q13 -17 26 0"/></g>
+  <g id="brows" stroke="#3d1a3f" stroke-width="5" stroke-linecap="round"><path id="browL" d="M76 90 h26"/><path d="M152 90 h26"/></g>
+ </g></g></g>
+</svg>
